@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1f3a5f;
+  --navy-light: #2d5080;
+  --bordo: #9e3842;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --line: #e4e7ec;
+  --text: #1a2230;
+  --muted: #667085;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, opacity 0.15s;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--navy);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--navy-light);
+}
+.btn-ghost {
+  background: #fff;
+  border-color: var(--line);
+  color: var(--text);
+}
+.btn-ghost:hover {
+  background: #f2f4f7;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 1.4rem;
+}
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  font-size: 0.95rem;
+  background: #fff;
+  color: var(--text);
+}
+.textarea {
+  resize: vertical;
+  min-height: 70px;
+  line-height: 1.5;
+}
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  display: block;
+}
